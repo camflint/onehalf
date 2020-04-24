@@ -17,27 +17,28 @@ let g:colors_name="onehalflight"
 let colors_name="onehalflight"
 
 
-let s:black       = { "gui": "#383a42", "cterm": "237" }
-let s:red         = { "gui": "#e45649", "cterm": "167" }
-let s:green       = { "gui": "#50a14f", "cterm": "71" }
-let s:yellow      = { "gui": "#c18401", "cterm": "136" }
-let s:blue        = { "gui": "#0184bc", "cterm": "31" }
-let s:purple      = { "gui": "#a626a4", "cterm": "127" }
-let s:cyan        = { "gui": "#0997b3", "cterm": "31" }
-let s:white       = { "gui": "#fafafa", "cterm": "231" }
+let s:black        = { "gui": "#383a42", "cterm": "237" }
+let s:red          = { "gui": "#e45649", "cterm": "167" }
+let s:green        = { "gui": "#50a14f", "cterm": "71" }
+let s:yellow       = { "gui": "#c18401", "cterm": "136" }
+let s:blue         = { "gui": "#0184bc", "cterm": "31" }
+let s:purple       = { "gui": "#a626a4", "cterm": "127" }
+let s:cyan         = { "gui": "#0997b3", "cterm": "31" }
+let s:white        = { "gui": "#fafafa", "cterm": "231" }
 
-let s:fg          = s:black
-let s:bg          = s:white
+let s:fg           = s:black
+let s:bg           = s:white
 
-let s:comment_fg  = { "gui": "#a0a1a7", "cterm": "247" }
-let s:gutter_bg   = { "gui": "#fafafa", "cterm": "231" }
-let s:gutter_fg   = { "gui": "#d4d4d4", "cterm": "252" }
+let s:comment_fg   = { "gui": "#a0a1a7", "cterm": "247" }
+let s:gutter_bg    = { "gui": "#fafafa", "cterm": "231" }
+let s:gutter_fg    = { "gui": "#d4d4d4", "cterm": "252" }
 
-let s:cursor_line = { "gui": "#f0f0f0", "cterm": "255" }
-let s:color_col   = { "gui": "#f0f0f0", "cterm": "255" }
+let s:cursor_line  = { "gui": "#f0f0f0", "cterm": "255" }
+let s:color_col    = { "gui": "#f0f0f0", "cterm": "255" }
 
-let s:selection   = { "gui": "#bfceff", "cterm": "153" }
-let s:vertsplit   = { "gui": "#f0f0f0", "cterm": "255" }
+let s:selection    = { "gui": "#bfceff", "cterm": "153" }
+let s:vertsplit_fg = { "gui": "#969696", "cterm": "245" }
+let s:vertsplit_bg = { "gui": "#e3e3e3", "cterm": "254" }
 
 
 function! s:h(group, fg, bg, attr)
@@ -106,7 +107,7 @@ call s:h("VisualNOS", "", s:selection, "")
 call s:h("ColorColumn", "", s:color_col, "")
 call s:h("Conceal", s:fg, "", "")
 call s:h("Directory", s:blue, "", "")
-call s:h("VertSplit", s:vertsplit, s:vertsplit, "")
+call s:h("VertSplit", s:vertsplit_fg, s:vertsplit_bg, "")
 call s:h("Folded", s:fg, "", "")
 call s:h("FoldColumn", s:fg, "", "")
 call s:h("SignColumn", s:fg, "", "")
@@ -119,7 +120,7 @@ call s:h("WildMenu", s:fg, "", "")
 
 
 " Syntax colors {
-call s:h("Comment", s:comment_fg, "", "")
+call s:h("Comment", s:comment_fg, "", "italic")
 call s:h("Constant", s:cyan, "", "")
 call s:h("String", s:green, "", "")
 call s:h("Character", s:green, "", "")
